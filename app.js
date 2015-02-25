@@ -11,4 +11,7 @@ brodineNews.config(function($stateProvider){
     templateUrl: "partials/posts.html",
     controller: 'PostsCtrl'
   });
+
+  
+
 });

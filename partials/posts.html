@@ -1,0 +1,21 @@
+<div ng-show"posts.length">
+  <h1>Here is posts for u LOLZ</h1>
+  <ul>
+    <li ng-repeat="item in posts">
+      <a ui-sref="posts.comments({ postId: item.id })">{{ item.name }}</a>
+      <a ng-href="{{ item.name }}">Go to this link</a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-4">
+  <h3>Add a new post</h3>
+  <form ng-submit="PostsFactory.addPost()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="PostsFactory.postName" class="form-control" placeholder="Enter a link url">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<div ui-view> </div>
