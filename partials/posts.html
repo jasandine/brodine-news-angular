@@ -3,7 +3,7 @@
   <ul>
     <li ng-repeat="item in posts">
       <a ui-sref="posts.comments({ postId: item.id })">{{ item.name }}</a>
-      <a ng-href="{{ item.name }}">Go to this link</a>
+      <a ng-href="http://{{ item.name }}" target="_blank" ng-mousedown="openTab()">Go to this link</a>
     </li>
   </ul>
 </div>
