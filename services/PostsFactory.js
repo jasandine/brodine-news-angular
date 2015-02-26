@@ -16,5 +16,9 @@ brodineNews.factory('PostsFactory', function PostsFactory() {
     item.votes += 1;
   };
 
+  factory.voteOrder = function() {
+
+  };
+
   return factory;
 });
