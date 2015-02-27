@@ -16,9 +16,11 @@ brodineNews.factory('PostsFactory', function PostsFactory() {
 
   factory.addDate = function(item) {
     item.date = new Date();
-  }
+  };
 
-
+  factory.rankLink = function() {
+    
+  };
 
   return factory;
 });
