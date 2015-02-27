@@ -12,6 +12,12 @@ brodineNews.config(function($stateProvider){
     controller: 'PostsCtrl'
   });
 
+  $stateProvider.state('posts.comments', {
+    url: "/:postId",
+    templateUrl: "partials/posts.comments.html",
+    controller: 'CommentsCtrl'
+  });
+
 
 
 });

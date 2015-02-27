@@ -2,9 +2,4 @@ brodineNews.controller('PostsCtrl', function PostsCtrl($scope, $stateParams, Pos
   $scope.posts = PostsFactory.posts;
   $scope.PostsFactory = PostsFactory;
 
-
-  // $scope.upVote = function() {
-  //   $scope.votes +=1;
-  // };
-
 });

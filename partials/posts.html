@@ -4,7 +4,8 @@
     <li ng-repeat="item in posts | orderBy : 'votes' : true">
       <p><a ui-sref="posts.comments({ postId: item.id })">Comment on post: {{ item.name }}</a></p>
       <p><a ng-href="http://{{ item.name }}" target="_blank" ng-mousedown="openTab()">Go to this link</a></p>
-      <p><button ng-click="PostsFactory.upVotes(item)" class="btn btn-success">Number of UpVotes: {{ item.votes }}</button></p>
+      <p><button ng-click="PostsFactory.upVotes(item).addDate(item)" class="btn btn-success">Number of UpVotes: {{ item.votes }}</button></p>
+      <p>Date Authored: {{ item.date | date:'medium' }}</p>
     </li>
   </ul>
 </div>

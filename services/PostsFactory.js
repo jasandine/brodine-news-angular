@@ -4,21 +4,21 @@ brodineNews.factory('PostsFactory', function PostsFactory() {
 
 
   factory.addPost = function() {
-    factory.posts.push({ name: factory.postName, votes: 0, id: factory.posts.length + 1, comments: [] });
+    factory.posts.push({ name: factory.postName, votes: 0, id: factory.posts.length + 1, date: new Date(), comments: [] });
     factory.postName = null;
   };
 
-  // factory.updateVotes = function(votes) {
-  //   return votes++;
-  // };
 
   factory.upVotes = function(item) {
     item.votes += 1;
   };
 
-  factory.voteOrder = function() {
 
-  };
+  factory.addDate = function(item) {
+    item.date = new Date();
+  }
+
+
 
   return factory;
 });
